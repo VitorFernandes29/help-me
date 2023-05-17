@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-title>
+    <img src="assets/img/Logo Help.me-01.png"/>
+  </ion-title>
+</ion-header>
+
+
+<ion-content id="box" >
+
+    <ion-slide value="pessoa fisica">
+      <div class="slide-inner ion-padding">
+        <br> <br> <br> <br><br> <br> <br>  <br> <br> <br> <br> <br> <br>  <br> <br> <br> <br>
+
+
+        <ion-title>{{atualizar ? 'Atualizar Cliente' : 'Novo Cliente'}}</ion-title>
+
+<form #f="ngForm"(ngSubmit)="enviando(f)">
+
+        <ion-item class="ion-margin-top">
+          <ion-label position="floating" required>Nome:</ion-label>
+          <ion-input type="text" [(ngModel)]="dados.nome" name="nome"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top">
+          <ion-label position="floating" required>Digite o CPF / CNPJ:</ion-label>
+          <ion-input type="" [(ngModel)]="dados.cpf" name="cpf"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top">
+          <ion-label>Data de nascmento:</ion-label>
+          <ion-input type="date" [(ngModel)]="dados.nasc" name="nasc"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top">
+          <ion-label position="floating" required>Area de Interesse:</ion-label>
+          <ion-input type="text" [(ngModel)]="dados.interesse" name="interesse"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top">
+          <ion-label position="floating" required9>Genero:</ion-label>
+          <ion-input type="text" [(ngModel)]="dados.genero" name="genero"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top">
+          <ion-label position="floating" required>Email:</ion-label>
+          <ion-input type="email" [(ngModel)]="dados.email" name="email"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top">
+          <ion-label position="floating" required>Senha:</ion-label>
+          <ion-input type="password" [(ngModel)]="dados.senha" name="senha"></ion-input>
+
+        </ion-item>
+
+        <ion-item class="ion-margin-top">
+          <ion-label position="floating">Confirme a senha:</ion-label>
+          <ion-input  type="password" required></ion-input>
+        </ion-item>
+
+        <ion-button fill="outline" expand="block" type="submit">{{atualizar ? 'Atualizar Cliente' : ' Criar conta Helpme'}}</ion-button>
+
+        <br> <br>
+      </form>
+        <ion-footer class="ion-margin-center">
+
+          <br>
+          <p class="messagem">
+            Help.Me vai ajudar você a crescer seu empreendimento!
+          </p>
+          <p class="messagem">
+            CopyRight©2022
+          </p> <br> <br>
+        </ion-footer>
+
+      </div>
+    </ion-slide>
+  <br>
+  <br>
+  <br>
+</ion-content>
+
+
+
